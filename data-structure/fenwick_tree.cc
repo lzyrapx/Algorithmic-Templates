@@ -26,3 +26,18 @@ struct BIT {
     return id + 1;
   }
 };
+
+template <typename T>
+struct BIT2d {
+    int n, m;
+    vector<BIT<T>> tree;
+    BIT2d(int r = 0, int c = 0) : n(r), m(c), tree(r + 1, BIT<T>(c)) {}
+    void add(int i, int j, T v) {
+        for (; i <= n; i += i & -i) tree[i].add(j, v);
+    }
+    T query(int i, int j) {
+        T s = 0;
+        for (; i > 0; i -= i & -i) s += tree[i].query(j);
+        return s;
+    }
+};

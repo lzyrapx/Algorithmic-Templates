@@ -31,13 +31,13 @@ class SparseTable {
 };
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(0);
-  vector<ll> a(n + 1);
-  SparseTable<long long> smin(
-      a, [&](long long i, long long j) { return min(i, j); });
-  SparseTable<long long> smax(
-      a, [&](long long i, lon long j) { return max(i, j); });
-  int rvmin = smin.get(i + 1, n - 1);
-  int rvmax = smax.get(i + 1, n - 1);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    vector<ll> a(n + 1);
+    SparseTable<long long> smin(
+        a, [&](long long i, long long j) { return min(i, j); });
+    SparseTable<long long> smax(
+        a, [&](long long i, lon long j) { return max(i, j); });
+    int rvmin = smin.get(i + 1, n - 1);
+    int rvmax = smax.get(i + 1, n - 1);
 }
