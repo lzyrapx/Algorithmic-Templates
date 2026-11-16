@@ -13,7 +13,7 @@ time complexity is O(VE^2).
 #define maxn 10010
 int maxData = 0x7fffffff;
 int capacity[maxn][maxn];  // 记录残留网络的容量
-int flow[maxn];  // 标记从源点到当前节点实际还剩多少流量可用
+int flow[maxn];            // 标记从源点到当前节点实际还剩多少流量可用
 int pre[maxn];  // 标记在这条路径上当前节点的前驱,同时标记该节点是否在队列中
 int n, m;
 queue<int> que;
@@ -73,7 +73,7 @@ int main() {
     memset(flow, 0, sizeof(flow));
     for (int i = 0; i < m; i++) {
       cin >> start >> end >> cap;
-      if (start == end) continue;  // 考虑起点终点相同的情况
+      if (start == end) continue;   // 考虑起点终点相同的情况
       capacity[start][end] += cap;  // 此处注意可能出现多条同一起点终点的情况
     }
     cout << maxFlow(S, T) << endl;  // S 到 T的最大流

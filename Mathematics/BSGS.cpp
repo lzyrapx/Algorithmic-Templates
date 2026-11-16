@@ -1,8 +1,3 @@
-/*
- * @Author: zhaoyang.liang
- * @Github: https://github.com/LzyRapx
- * @Date: 2019-06-13 00:02:05
- */
 // 大步小步法（Baby-Step-Giant-Step，简称BSGS）
 // https://www.lydsy.com/JudgeOnline/problem.php?id=2242
 // 给定y,z,p，计算满足 y^x ≡ z ( mod p)的最小非负整数x., p 为素数
